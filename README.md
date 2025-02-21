@@ -11,7 +11,7 @@ Developer, Artist & Student
 * 🐧 I use arch btw...
 
 <a href="https://www.github.com/heartbrokencat" target="_blank" rel="noreferrer"><img
-src="https://img.shields.io/github/followers/heartbrokencat?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" /></a>
+src="https://img.shields.io/github/followers/saru2406?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" /></a>
 
 ### Learning these currently 😭
 
