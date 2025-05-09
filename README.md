@@ -1,51 +1,30 @@
-<div align="center" style="font-family: 'Cascadia Code', Consolas, monospace;">
-  <svg width="500" height="281">
-    <defs>
-      <clipPath id="rounded-corners-welcome">
-        <rect x="0" y="0" width="100%" height="100%" rx="15" ry="15"/>
-      </clipPath>
-    </defs>
-    <image href="https://github.com/saru2406/profilefiles/blob/main/Hello%20there.gif?raw=true" width="100%" height="100%" clip-path="url(#rounded-corners-welcome)"/>
-  </svg>
-  <p>Welcome</p>
-</div>
+Hi Im Saru 🐶
+===============================
 
-<div style="font-family: 'Cascadia Code', Consolas, monospace;">
-  <svg width="500" height="88">
-    <defs>
-      <clipPath id="rounded-corners-aboutme">
-        <rect x="0" y="0" width="100%" height="100%" rx="15" ry="15"/>
-      </clipPath>
-    </defs>
-    <image href="https://github.com/saru2406/profilefiles/blob/main/About%20me.gif?raw=true" width="100%" height="100%" clip-path="url(#rounded-corners-aboutme)"/>
-  </svg>
-  <p>About me</p>
-</div>
-I like making games and apps.(Learning Rust, Godot, etc..) ;) <br/>
-<br/>
+Developer, Artist & Student
+-----------------------------
 
-<div style="font-family: 'Cascadia Code', Consolas, monospace;">
-  <svg width="500" height="88">
-    <defs>
-      <clipPath id="rounded-corners-projects">
-        <rect x="0" y="0" width="100%" height="100%" rx="15" ry="15"/>
-      </clipPath>
-    </defs>
-    <image href="https://github.com/saru2406/profilefiles/blob/main/Projects.gif?raw=true" width="100%" height="100%" clip-path="url(#rounded-corners-projects)"/>
-  </svg>
-  <p>Projects</p>
-</div>
-coming soon...<br/>
+* 🇮🇳 I'm from india
+* 😁 New projects are coming soon :) ....
+* 😰 Learning Game develeopment, 3d modeling, drawing..
+* 😼 Also learning rust
+* 🐧 I use arch btw...
 
-<div style="font-family: 'Cascadia Code', Consolas, monospace;">
-  <svg width="500" height="88">
-    <defs>
-      <clipPath id="rounded-corners-stats">
-        <rect x="0" y="0" width="100%" height="100%" rx="15" ry="15"/>
-      </clipPath>
-    </defs>
-    <image href="https://github.com/saru2406/profilefiles/blob/main/Stats.gif?raw=true" width="100%" height="100%" clip-path="url(#rounded-corners-stats)"/>
-  </svg>
-  <p>Stats</p>
-</div>
-coming soon.
+<a href="https://www.github.com/heartbrokencat" target="_blank" rel="noreferrer"><img
+src="https://img.shields.io/github/followers/saru2406?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" /></a>
+
+### Learning these currently 😭
+
+
+<p align="left">
+<a href="https://godotengine.org" target="_blank" rel="noreferrer"><img src="https://godotengine.org/assets/press/icon_color_outline.png" width="32" height="32" alt="GODOT" /></a>
+<a href="https://www.blender.org/" target="_blank" rel="noreferrer"><img src="https://static-00.iconduck.com/assets.00/blender-icon-128x104-2gx6oi2b.png" width="32" height="32" alt="Blender" /></a>
+<a href="https://www.adobe.com/uk/products/photoshop.html" target="_blank" rel="noreferrer"><img src="https://www.adobe.com/content/dam/acom/one-console/icons_rebrand/ps_appicon.svg" width="32" height="32" alt="Photoshop" /></a>
+<a href="https://www.adobe.com/uk/products/aftereffects.html" target="_blank" rel="noreferrer"><img src="https://www.adobe.com/content/dam/cc/us/en/products/ccoverview/ae_cc_app_RGB.svg" width="32" height="32" alt="After Effects" /></a>
+</p>
+
+
+### Socials
+
+<p align="left"> <a href="https://www.youtube.com/@saru24" target="_blank" rel="noreferrer"><img src="https://imgs.search.brave.com/x6X5AC15C1oxgs2e_yKp6u-xDgH9x8we7o5tnWB83wM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvMTM4NC8xMzg0/MDYwLnBuZw" width="32" height="32" /></a> <a href="https://www.github.com/heartbrokencat" target="_blank" rel="noreferrer"><img 
+<p align="left"> <a href="https://www.instagram.com/ssarruuuu/" target="_blank" rel="noreferrer"><img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/tBxa1IFcTQH.png" width="32" height="32" /></a> <a href="https://www.github.com/dheartbrokencat" target="_blank" rel="noreferrer"><img 
