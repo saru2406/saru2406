@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 280" width="100%" height="100%">
+  <defs>
+    <!-- Obsidian AMOLED Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08080a" />
+      <stop offset="50%" stop-color="#0c0c0e" />
+      <stop offset="100%" stop-color="#050507" />
+    </linearGradient>
+
+    <!-- Top Border Shimmer Glow -->
+    <linearGradient id="glowBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="transparent" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="transparent" />
+    </linearGradient>
+
+    <!-- Shimmering Text Gradient (like splashTextShimmer) -->
+    <linearGradient id="textShimmer" x1="0%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4" />
+      <stop offset="25%" stop-color="#ffffff" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="75%" stop-color="#ffffff" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4" />
+      <animate attributeName="x1" from="-100%" to="100%" dur="3.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" from="100%" to="300%" dur="3.5s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <!-- Cyan Ambient Glow -->
+    <radialGradient id="cyanAmbient" cx="50%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Pulsing Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .mono { font-family: 'Maple Mono', 'Cascadia Code', 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+      .script-logo { font-family: 'Meow Script', 'Brush Script MT', 'Segoe Script', cursive; }
+      
+      @keyframes sweepBorder {
+        0% { transform: translateX(-100%); opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { transform: translateX(200%); opacity: 0; }
+      }
+
+      @keyframes pulseDot {
+        0%, 100% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.35); opacity: 0.4; }
+      }
+
+      @keyframes starTwinkle {
+        0%, 100% { opacity: 0.2; transform: scale(0.8); }
+        50% { opacity: 0.95; transform: scale(1.2); }
+      }
+
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+      }
+
+      .line-glow {
+        animation: sweepBorder 3.5s ease-in-out infinite;
+      }
+      .pulse-beacon {
+        transform-origin: 52px 226px;
+        animation: pulseDot 2s ease-in-out infinite;
+      }
+      .star-1 { transform-origin: 120px 50px; animation: starTwinkle 3.2s ease-in-out infinite; }
+      .star-2 { transform-origin: 760px 70px; animation: starTwinkle 2.5s ease-in-out infinite 0.7s; }
+      .star-3 { transform-origin: 690px 200px; animation: starTwinkle 4s ease-in-out infinite 1.4s; }
+      .float-group { animation: floatSlow 4s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Background Base Card -->
+  <rect x="2" y="2" width="846" height="276" rx="20" fill="url(#bgGradient)" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.2" />
+  
+  <!-- Subtle Ambient Radial Glow on Top -->
+  <rect x="2" y="2" width="846" height="276" rx="20" fill="url(#cyanAmbient)" pointer-events="none" />
+
+  <!-- Animated Glowing Top Border Sweep -->
+  <g clip-path="url(#cardClip)">
+    <clipPath id="cardClip">
+      <rect x="2" y="2" width="846" height="276" rx="20" />
+    </clipPath>
+    <rect class="line-glow" x="0" y="2" width="280" height="2" fill="url(#glowBorder)" filter="url(#glow)" />
+  </g>
+
+  <!-- Stars / Ambient Micro-Glow Particles -->
+  <g fill="#ffffff">
+    <circle class="star-1" cx="120" cy="50" r="1.5" />
+    <circle class="star-2" cx="760" cy="70" r="1.8" />
+    <circle class="star-3" cx="690" cy="200" r="1.2" />
+    <circle cx="210" cy="95" r="1" opacity="0.4" />
+    <circle cx="790" cy="150" r="1" opacity="0.35" />
+    <circle cx="90" cy="180" r="0.8" opacity="0.3" />
+  </g>
+
+  <!-- Top Navigation / Pill Bar Mockup -->
+  <g transform="translate(42, 28)">
+    <rect width="120" height="28" rx="14" fill="#121215" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1" />
+    <circle cx="16" cy="14" r="3.5" fill="#38bdf8" />
+    <text x="28" y="18" fill="#ffffff" font-size="11" font-weight="600" class="mono" letter-spacing="0.5">saru.dev</text>
+
+    <!-- Mini decorative window dots on the right -->
+    <circle cx="740" cy="14" r="4" fill="#ffffff" fill-opacity="0.2" />
+    <circle cx="754" cy="14" r="4" fill="#ffffff" fill-opacity="0.2" />
+    <circle cx="768" cy="14" r="4" fill="#ffffff" fill-opacity="0.4" />
+  </g>
+
+  <!-- Main Identity Area -->
+  <g transform="translate(48, 80)">
+    <!-- Handwritten Calligraphy Logo 'saru' with subtle glow -->
+    <g class="float-group">
+      <!-- Glow Underlay -->
+      <text x="0" y="62" fill="#ffffff" fill-opacity="0.2" font-size="64" font-weight="400" class="script-logo" filter="url(#softGlow)">saru</text>
+      <!-- Main Script Logo Text with Shimmer -->
+      <text x="0" y="62" fill="url(#textShimmer)" font-size="64" font-weight="400" class="script-logo">saru</text>
+    </g>
+
+    <!-- Subtitle / Role Tagline -->
+    <text x="145" y="44" fill="#ffffff" font-size="20" font-weight="700" class="mono" letter-spacing="-0.3">
+      Creative Developer <tspan fill="#38bdf8" font-weight="400">&amp;</tspan> Systems Explorer
+    </text>
+
+    <text x="145" y="66" fill="#cbd5e1" font-size="13" font-weight="400" class="mono" letter-spacing="0.2">
+      Linux &amp; Systems • Rust &amp; C • Blender 3D • Godot Engine 4
+    </text>
+
+    <!-- Location & Status Badge Row -->
+    <g transform="translate(0, 100)">
+      <!-- Pill Badge: Location -->
+      <g>
+        <rect width="215" height="30" rx="15" fill="#121215" fill-opacity="0.8" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
+        <!-- Pin Icon -->
+        <path d="M 18 10 C 14.5 10, 12 12.5, 12 15.5 C 12 19.5, 18 24, 18 24 C 18 24, 24 19.5, 24 15.5 C 24 12.5, 21.5 10, 18 10 Z" fill="none" stroke="#ffffff" stroke-width="1.3" />
+        <circle cx="18" cy="15" r="1.8" fill="#ffffff" />
+        <text x="32" y="19.5" fill="#ffffff" font-size="11" font-weight="500" class="mono">Pondicherry, India [IN]</text>
+      </g>
+
+      <!-- Pill Badge: Status Beacon -->
+      <g transform="translate(225, 0)">
+        <rect width="250" height="30" rx="15" fill="#121215" fill-opacity="0.8" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
+        <!-- Radar Pulse Dot -->
+        <circle class="pulse-beacon" cx="16" cy="15" r="4" fill="#22c55e" filter="url(#glow)" />
+        <circle cx="16" cy="15" r="3" fill="#22c55e" />
+        <text x="30" y="19.5" fill="#ffffff" font-size="11" font-weight="500" class="mono">Building low-level &amp; games</text>
+      </g>
+
+      <!-- Pill Badge: Age / Student -->
+      <g transform="translate(485, 0)">
+        <rect width="145" height="30" rx="15" fill="#121215" fill-opacity="0.8" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
+        <text x="16" y="19.5" fill="#a1a1aa" font-size="11" font-weight="500" class="mono">age: <tspan fill="#ffffff" font-weight="600">18 yrs old</tspan></text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Decorative Aesthetic Element: Vector Monogram & Circuit Accents -->
+  <g transform="translate(710, 85)" opacity="0.3" stroke="#ffffff" stroke-width="1" fill="none">
+    <circle cx="45" cy="45" r="40" stroke-dasharray="3 3" />
+    <circle cx="45" cy="45" r="28" stroke-opacity="0.5" />
+    <path d="M 45 5 L 45 85 M 5 45 L 85 45" stroke-opacity="0.3" />
+    <rect x="37" y="37" width="16" height="16" rx="4" stroke="#ffffff" stroke-width="1.2" />
+  </g>
+</svg>

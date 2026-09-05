@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0c0e" />
+      <stop offset="100%" stop-color="#08080a" />
+    </linearGradient>
+
+    <style>
+      .mono { font-family: 'Maple Mono', 'Cascadia Code', 'JetBrains Mono', 'Fira Code', monospace; }
+      
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+
+      .cursor {
+        animation: blink 1s infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Terminal Frame -->
+  <rect x="1" y="1" width="408" height="238" rx="16" fill="url(#termBg)" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.2" />
+
+  <!-- Window Header -->
+  <g transform="translate(18, 16)">
+    <circle cx="0" cy="0" r="5" fill="#f43f5e" fill-opacity="0.8" />
+    <circle cx="15" cy="0" r="5" fill="#eab308" fill-opacity="0.8" />
+    <circle cx="30" cy="0" r="5" fill="#22c55e" fill-opacity="0.8" />
+    <text x="140" y="4" fill="#a1a1aa" font-size="11" font-weight="600" class="mono">saru@obsidian: ~</text>
+  </g>
+  <line x1="1" y1="32" x2="409" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" />
+
+  <!-- Terminal Body Content -->
+  <g transform="translate(18, 52)" class="mono" font-size="11">
+    <!-- Command Prompt -->
+    <text x="0" y="0" fill="#38bdf8" font-weight="700">➜</text>
+    <text x="16" y="0" fill="#cbd5e1" font-weight="600">~</text>
+    <text x="32" y="0" fill="#ffffff" font-weight="600">neofetch --minimal</text>
+    <!-- Blinking Cursor -->
+    <rect class="cursor" x="175" y="-10" width="7" height="13" fill="#ffffff" />
+
+    <!-- Neofetch Output -->
+    <g transform="translate(0, 22)">
+      <!-- Left decorative glyph / mini ascii -->
+      <g fill="#38bdf8" font-size="9" opacity="0.8">
+        <text x="0" y="12">/\</text>
+        <text x="0" y="24">/  \</text>
+        <text x="0" y="36">/\   \</text>
+        <text x="0" y="48">/      \</text>
+        <text x="0" y="60">/   ,,   \</text>
+        <text x="0" y="72">/   |  |  \</text>
+      </g>
+
+      <!-- System details list -->
+      <g transform="translate(68, 0)" font-size="11">
+        <text x="0" y="12" fill="#38bdf8" font-weight="700">OS:</text>
+        <text x="75" y="12" fill="#ffffff">Arch Linux x86_64</text>
+
+        <text x="0" y="28" fill="#38bdf8" font-weight="700">Host:</text>
+        <text x="75" y="28" fill="#ffffff">Hyprland (Wayland)</text>
+
+        <text x="0" y="44" fill="#38bdf8" font-weight="700">Kernel:</text>
+        <text x="75" y="44" fill="#cbd5e1">6.10.x-zen</text>
+
+        <text x="0" y="60" fill="#38bdf8" font-weight="700">Shell:</text>
+        <text x="75" y="60" fill="#ffffff">zsh 5.9 + starship</text>
+
+        <text x="0" y="76" fill="#38bdf8" font-weight="700">Editor:</text>
+        <text x="75" y="76" fill="#ffffff">Neovim / VS Code</text>
+
+        <text x="0" y="92" fill="#38bdf8" font-weight="700">Focus:</text>
+        <text x="75" y="92" fill="#ffffff">Rust • C • Godot 4</text>
+
+        <text x="0" y="108" fill="#38bdf8" font-weight="700">Memory:</text>
+        <text x="75" y="108" fill="#38bdf8">■■■■■■■■<tspan fill="#ffffff" fill-opacity="0.2">■■■■</tspan></text>
+        <text x="175" y="108" fill="#a1a1aa">64%</text>
+      </g>
+    </g>
+
+    <!-- Color Palette Dots at bottom -->
+    <g transform="translate(68, 150)">
+      <circle cx="8" cy="0" r="4.5" fill="#f43f5e" />
+      <circle cx="24" cy="0" r="4.5" fill="#fb923c" />
+      <circle cx="40" cy="0" r="4.5" fill="#facc15" />
+      <circle cx="56" cy="0" r="4.5" fill="#4ade80" />
+      <circle cx="72" cy="0" r="4.5" fill="#38bdf8" />
+      <circle cx="88" cy="0" r="4.5" fill="#818cf8" />
+      <circle cx="104" cy="0" r="4.5" fill="#ffffff" />
+      <circle cx="120" cy="0" r="4.5" fill="#52525b" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gridCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e0e12" />
+      <stop offset="100%" stop-color="#08080a" />
+    </linearGradient>
+
+    <linearGradient id="borderGlowSweep" x1="0%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%" stop-color="transparent" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="transparent" />
+      <animate attributeName="x1" from="-100%" to="100%" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="x2" from="100%" to="300%" dur="4s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <style>
+      .mono { font-family: 'Maple Mono', 'Cascadia Code', 'JetBrains Mono', 'Fira Code', monospace; }
+      .pill {
+        fill: #16161b;
+        stroke: #ffffff;
+        stroke-opacity: 0.12;
+        stroke-width: 1;
+        rx: 10px;
+      }
+      .pill-text {
+        fill: #ffffff;
+        font-size: 11px;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+
+  <!-- ================= CARD 1: PROGRAMMING LANGUAGES ================= -->
+  <g transform="translate(10, 10)">
+    <rect width="405" height="190" rx="16" fill="url(#gridCardBg)" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.2" />
+    
+    <!-- Header -->
+    <g transform="translate(20, 28)">
+      <circle cx="10" cy="0" r="12" fill="#ffffff" fill-opacity="0.08" />
+      <text x="5" y="4" fill="#38bdf8" font-size="12" font-weight="700" class="mono">&lt;/&gt;</text>
+      <text x="32" y="4" fill="#ffffff" font-size="14" font-weight="700" class="mono">Programming Languages</text>
+    </g>
+
+    <!-- Chips Grid -->
+    <g transform="translate(20, 60)" class="mono">
+      <!-- Row 1 -->
+      <rect class="pill" x="0" y="0" width="56" height="28" />
+      <text class="pill-text" x="14" y="18">Rust</text>
+
+      <rect class="pill" x="66" y="0" width="46" height="28" />
+      <text class="pill-text" x="18" y="18">C</text>
+
+      <rect class="pill" x="122" y="0" width="76" height="28" />
+      <text class="pill-text" x="14" y="18">Python</text>
+
+      <rect class="pill" x="208" y="0" width="102" height="28" />
+      <text class="pill-text" x="14" y="18">TypeScript</text>
+
+      <!-- Row 2 -->
+      <rect class="pill" x="0" y="38" width="68" height="28" />
+      <text class="pill-text" x="14" y="56">React</text>
+
+      <rect class="pill" x="78" y="38" width="80" height="28" />
+      <text class="pill-text" x="14" y="56">Node.js</text>
+
+      <rect class="pill" x="168" y="38" width="86" height="28" />
+      <text class="pill-text" x="14" y="56">MongoDB</text>
+
+      <rect class="pill" x="264" y="38" width="70" height="28" />
+      <text class="pill-text" x="14" y="56">HTML/CSS</text>
+
+      <!-- Row 3 -->
+      <rect class="pill" x="0" y="76" width="106" height="28" />
+      <text class="pill-text" x="14" y="94">Vanilla CSS</text>
+
+      <rect class="pill" x="116" y="76" width="112" height="28" />
+      <text class="pill-text" x="14" y="94">Systems Logic</text>
+    </g>
+  </g>
+
+  <!-- ================= CARD 2: LINUX & SYSTEMS ================= -->
+  <g transform="translate(435, 10)">
+    <rect width="405" height="190" rx="16" fill="url(#gridCardBg)" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.2" />
+    
+    <!-- Header -->
+    <g transform="translate(20, 28)">
+      <circle cx="10" cy="0" r="12" fill="#ffffff" fill-opacity="0.08" />
+      <text x="6" y="4" fill="#38bdf8" font-size="12" font-weight="700" class="mono">#</text>
+      <text x="32" y="4" fill="#ffffff" font-size="14" font-weight="700" class="mono">Linux &amp; Systems</text>
+    </g>
+
+    <!-- Chips Grid -->
+    <g transform="translate(20, 60)" class="mono">
+      <!-- Row 1 -->
+      <rect class="pill" x="0" y="0" width="100" height="28" />
+      <text class="pill-text" x="14" y="18">Arch Linux</text>
+
+      <rect class="pill" x="110" y="0" width="134" height="28" />
+      <text class="pill-text" x="14" y="18">Bash / Zsh Shell</text>
+
+      <rect class="pill" x="254" y="0" width="106" height="28" />
+      <text class="pill-text" x="14" y="18">Linux CLI</text>
+
+      <!-- Row 2 -->
+      <rect class="pill" x="0" y="38" width="158" height="28" />
+      <text class="pill-text" x="14" y="56">Hyprland (Wayland)</text>
+
+      <rect class="pill" x="168" y="38" width="146" height="28" />
+      <text class="pill-text" x="14" y="56">Systemd &amp; Services</text>
+
+      <!-- Row 3 -->
+      <rect class="pill" x="0" y="76" width="150" height="28" />
+      <text class="pill-text" x="14" y="94">Networking &amp; SSH</text>
+
+      <rect class="pill" x="160" y="76" width="168" height="28" />
+      <text class="pill-text" x="14" y="94">Git &amp; Dotfiles Mgmt</text>
+    </g>
+  </g>
+
+  <!-- ================= CARD 3: GAME DEVELOPMENT ================= -->
+  <g transform="translate(10, 220)">
+    <rect width="405" height="190" rx="16" fill="url(#gridCardBg)" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.2" />
+    
+    <!-- Header -->
+    <g transform="translate(20, 28)">
+      <circle cx="10" cy="0" r="12" fill="#ffffff" fill-opacity="0.08" />
+      <text x="6" y="4" fill="#38bdf8" font-size="12" font-weight="700" class="mono">🎮</text>
+      <text x="32" y="4" fill="#ffffff" font-size="14" font-weight="700" class="mono">Game Development</text>
+    </g>
+
+    <!-- Chips Grid -->
+    <g transform="translate(20, 60)" class="mono">
+      <!-- Row 1 -->
+      <rect class="pill" x="0" y="0" width="84" height="28" />
+      <text class="pill-text" x="14" y="18">Godot 4</text>
+
+      <rect class="pill" x="94" y="0" width="92" height="28" />
+      <text class="pill-text" x="14" y="18">GDScript</text>
+
+      <rect class="pill" x="196" y="0" width="144" height="28" />
+      <text class="pill-text" x="14" y="18">2D &amp; 3D Gameplay</text>
+
+      <!-- Row 2 -->
+      <rect class="pill" x="0" y="38" width="180" height="28" />
+      <text class="pill-text" x="14" y="56">Physics &amp; Mechanics</text>
+
+      <rect class="pill" x="190" y="38" width="140" height="28" />
+      <text class="pill-text" x="14" y="56">State Machines</text>
+
+      <!-- Row 3 -->
+      <rect class="pill" x="0" y="76" width="160" height="28" />
+      <text class="pill-text" x="14" y="94">Procedural Logic</text>
+
+      <rect class="pill" x="170" y="76" width="140" height="28" />
+      <text class="pill-text" x="14" y="94">Shader Scripting</text>
+    </g>
+  </g>
+
+  <!-- ================= CARD 4: CREATIVE MEDIA & 3D ================= -->
+  <g transform="translate(435, 220)">
+    <rect width="405" height="190" rx="16" fill="url(#gridCardBg)" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.2" />
+    
+    <!-- Header -->
+    <g transform="translate(20, 28)">
+      <circle cx="10" cy="0" r="12" fill="#ffffff" fill-opacity="0.08" />
+      <text x="6" y="4" fill="#38bdf8" font-size="12" font-weight="700" class="mono">🎨</text>
+      <text x="32" y="4" fill="#ffffff" font-size="14" font-weight="700" class="mono">Creative Media &amp; 3D</text>
+    </g>
+
+    <!-- Chips Grid -->
+    <g transform="translate(20, 60)" class="mono">
+      <!-- Row 1 -->
+      <rect class="pill" x="0" y="0" width="102" height="28" />
+      <text class="pill-text" x="14" y="18">Blender 3D</text>
+
+      <rect class="pill" x="112" y="0" width="134" height="28" />
+      <text class="pill-text" x="14" y="18">DaVinci Resolve</text>
+
+      <rect class="pill" x="256" y="0" width="80" height="28" />
+      <text class="pill-text" x="14" y="18">Krita</text>
+
+      <!-- Row 2 -->
+      <rect class="pill" x="0" y="38" width="124" height="28" />
+      <text class="pill-text" x="14" y="56">Premiere Pro</text>
+
+      <rect class="pill" x="134" y="38" width="120" height="28" />
+      <text class="pill-text" x="14" y="56">After Effects</text>
+
+      <!-- Row 3 -->
+      <rect class="pill" x="0" y="76" width="100" height="28" />
+      <text class="pill-text" x="14" y="94">Photoshop</text>
+
+      <rect class="pill" x="110" y="76" width="150" height="28" />
+      <text class="pill-text" x="14" y="94">Motion Graphics</text>
+    </g>
+  </g>
+</svg>
