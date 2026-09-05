@@ -13,33 +13,17 @@
 
   <!-- ================= SOCIAL & CONTACT LINKS ================= -->
   <p>
-    <a href="https://saru24.vercel.app">
-      <img src="./profile-assets/btn-website.svg" alt="Website" />
-    </a>
+    <a href="https://saru24.vercel.app"><img src="./profile-assets/btn-website.svg" alt="Website" /></a>
     &nbsp;
-    <a href="https://github.com/saru2406">
-      <img src="./profile-assets/btn-github.svg" alt="GitHub" />
-    </a>
+    <a href="https://linkedin.com/in/saru24"><img src="./profile-assets/btn-linkedin.svg" alt="LinkedIn" /></a>
     &nbsp;
-    <a href="https://linkedin.com/in/saru24">
-      <img src="./profile-assets/btn-linkedin.svg" alt="LinkedIn" />
-    </a>
+    <a href="https://www.youtube.com/@saru24"><img src="./profile-assets/btn-youtube.svg" alt="YouTube" /></a>
     &nbsp;
-    <a href="https://www.youtube.com/@saru24">
-      <img src="./profile-assets/btn-youtube.svg" alt="YouTube" />
-    </a>
+    <a href="https://www.instagram.com/saru.cloudy/"><img src="./profile-assets/btn-instagram.svg" alt="Instagram" /></a>
     &nbsp;
-    <a href="https://www.instagram.com/saru.cloudy/">
-      <img src="./profile-assets/btn-instagram.svg" alt="Instagram" />
-    </a>
+    <a href="mailto:saruxcloudy@gmail.com"><img src="./profile-assets/btn-email.svg" alt="Email" /></a>
     &nbsp;
-    <a href="mailto:saruxcloudy@gmail.com">
-      <img src="./profile-assets/btn-email.svg" alt="Email" />
-    </a>
-    &nbsp;
-    <a href="https://docs.google.com/document/d/10B1pUB6peqvw3quOgUnMJkn5jyU7WiRH9uQ2sQ-ymRQ/edit?usp=sharing">
-      <img src="./profile-assets/btn-resume.svg" alt="Resume" />
-    </a>
+    <a href="https://docs.google.com/document/d/10B1pUB6peqvw3quOgUnMJkn5jyU7WiRH9uQ2sQ-ymRQ/edit?usp=sharing"><img src="./profile-assets/btn-resume.svg" alt="Resume" /></a>
   </p>
 
   <!-- ================= CORE TECH STACK ================= -->
