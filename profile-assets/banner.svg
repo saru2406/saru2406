@@ -1,175 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 280" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 250" width="100%" height="100%">
   <defs>
-    <!-- Obsidian AMOLED Background Gradient -->
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#08080a" />
-      <stop offset="50%" stop-color="#0c0c0e" />
-      <stop offset="100%" stop-color="#050507" />
-    </linearGradient>
-
-    <!-- Top Border Shimmer Glow -->
-    <linearGradient id="glowBorder" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="transparent" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.85" />
-      <stop offset="100%" stop-color="transparent" />
-    </linearGradient>
-
-    <!-- Shimmering Text Gradient (like splashTextShimmer) -->
-    <linearGradient id="textShimmer" x1="0%" y1="0%" x2="200%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4" />
-      <stop offset="25%" stop-color="#ffffff" stop-opacity="0.6" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="1" />
-      <stop offset="75%" stop-color="#ffffff" stop-opacity="0.6" />
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4" />
-      <animate attributeName="x1" from="-100%" to="100%" dur="3.5s" repeatCount="indefinite" />
-      <animate attributeName="x2" from="100%" to="300%" dur="3.5s" repeatCount="indefinite" />
-    </linearGradient>
-
-    <!-- Cyan Ambient Glow -->
-    <radialGradient id="cyanAmbient" cx="50%" cy="0%" r="60%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.14" />
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
-    </radialGradient>
-
-    <!-- Pulsing Glow Filter -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
-
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="6" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
-
     <style>
-      .mono { font-family: 'Maple Mono', 'Cascadia Code', 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
-      .script-logo { font-family: 'Meow Script', 'Brush Script MT', 'Segoe Script', cursive; }
+      @import url('https://cdn.jsdelivr.net/fontsource/fonts/maple-mono@latest/latin-400-normal.woff2');
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&amp;display=swap');
+
+      .mono {
+        font-family: 'Maple Mono', 'Maple Mono NF', 'Fira Code', 'JetBrains Mono', 'Cascadia Code', monospace;
+      }
+      .title { font-size: 13px; fill: #a6adc8; font-weight: 500; }
+      .prompt-user { fill: #a6e3a1; font-weight: 600; font-size: 14px; }
+      .prompt-at { fill: #6c7086; font-size: 14px; }
+      .prompt-host { fill: #89b4fa; font-weight: 600; font-size: 14px; }
+      .prompt-sep { fill: #6c7086; font-size: 14px; }
+      .prompt-dir { fill: #b4befe; font-weight: 600; font-size: 14px; }
+      .prompt-arrow { fill: #cba6f7; font-weight: 700; font-size: 15px; }
+      .prompt-cmd { fill: #cdd6f4; font-size: 14px; }
       
-      @keyframes sweepBorder {
-        0% { transform: translateX(-100%); opacity: 0; }
-        20% { opacity: 1; }
-        80% { opacity: 1; }
-        100% { transform: translateX(200%); opacity: 0; }
-      }
-
-      @keyframes pulseDot {
-        0%, 100% { transform: scale(1); opacity: 0.9; }
-        50% { transform: scale(1.35); opacity: 0.4; }
-      }
-
-      @keyframes starTwinkle {
-        0%, 100% { opacity: 0.2; transform: scale(0.8); }
-        50% { opacity: 0.95; transform: scale(1.2); }
-      }
-
-      @keyframes floatSlow {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-4px); }
-      }
-
-      .line-glow {
-        animation: sweepBorder 3.5s ease-in-out infinite;
-      }
-      .pulse-beacon {
-        transform-origin: 52px 226px;
-        animation: pulseDot 2s ease-in-out infinite;
-      }
-      .star-1 { transform-origin: 120px 50px; animation: starTwinkle 3.2s ease-in-out infinite; }
-      .star-2 { transform-origin: 760px 70px; animation: starTwinkle 2.5s ease-in-out infinite 0.7s; }
-      .star-3 { transform-origin: 690px 200px; animation: starTwinkle 4s ease-in-out infinite 1.4s; }
-      .float-group { animation: floatSlow 4s ease-in-out infinite; }
+      .key { fill: #cba6f7; font-weight: 600; font-size: 13.5px; }
+      .colon { fill: #6c7086; font-size: 13.5px; }
+      .val { fill: #cdd6f4; font-size: 13.5px; }
+      .val-accent { fill: #89dceb; font-size: 13.5px; }
+      .val-highlight { fill: #fab387; font-size: 13.5px; }
+      .comment { fill: #6c7086; font-style: italic; font-size: 13px; }
+      .status-text { fill: #94e2d5; font-size: 12px; font-weight: 500; }
     </style>
+
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181825" />
+      <stop offset="100%" stop-color="#1e1e2e" />
+    </linearGradient>
+
+    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#45475a" />
+      <stop offset="50%" stop-color="#cba6f7" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#45475a" />
+    </linearGradient>
   </defs>
 
-  <!-- Background Base Card -->
-  <rect x="2" y="2" width="846" height="276" rx="20" fill="url(#bgGradient)" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.2" />
-  
-  <!-- Subtle Ambient Radial Glow on Top -->
-  <rect x="2" y="2" width="846" height="276" rx="20" fill="url(#cyanAmbient)" pointer-events="none" />
+  <!-- Background Window Card -->
+  <rect x="1.5" y="1.5" width="847" height="247" rx="14" fill="url(#bg-grad)" stroke="url(#card-border)" stroke-width="1.5" />
 
-  <!-- Animated Glowing Top Border Sweep -->
-  <g clip-path="url(#cardClip)">
-    <clipPath id="cardClip">
-      <rect x="2" y="2" width="846" height="276" rx="20" />
-    </clipPath>
-    <rect class="line-glow" x="0" y="2" width="280" height="2" fill="url(#glowBorder)" filter="url(#glow)" />
+  <!-- Window Header Bar -->
+  <path d="M 1.5 15.5 A 14 14 0 0 1 15.5 1.5 L 834.5 1.5 A 14 14 0 0 1 848.5 15.5 L 848.5 42 L 1.5 42 Z" fill="#11111b" />
+  <line x1="1.5" y1="42" x2="848.5" y2="42" stroke="#313244" stroke-width="1" />
+
+  <!-- Terminal Window Controls (Mocha Palette) -->
+  <circle cx="24" cy="22" r="6" fill="#f38ba8" />
+  <circle cx="44" cy="22" r="6" fill="#f9e2af" />
+  <circle cx="64" cy="22" r="6" fill="#a6e3a1" />
+
+  <!-- Header Title -->
+  <text class="mono title" x="425" y="26" text-anchor="middle">saru@archlinux:~ (catppuccin mocha • maple mono)</text>
+
+  <!-- Status Pill Badge -->
+  <g transform="translate(685, 12)">
+    <rect x="0" y="0" width="145" height="20" rx="10" fill="#181825" stroke="#313244" stroke-width="1" />
+    <circle cx="12" cy="10" r="4" fill="#a6e3a1" />
+    <text class="mono status-text" x="24" y="14">status: active</text>
   </g>
 
-  <!-- Stars / Ambient Micro-Glow Particles -->
-  <g fill="#ffffff">
-    <circle class="star-1" cx="120" cy="50" r="1.5" />
-    <circle class="star-2" cx="760" cy="70" r="1.8" />
-    <circle class="star-3" cx="690" cy="200" r="1.2" />
-    <circle cx="210" cy="95" r="1" opacity="0.4" />
-    <circle cx="790" cy="150" r="1" opacity="0.35" />
-    <circle cx="90" cy="180" r="0.8" opacity="0.3" />
+  <!-- Terminal Prompt Line -->
+  <g transform="translate(28, 72)">
+    <text class="mono prompt-user" x="0" y="0">saru</text>
+    <text class="mono prompt-at" x="38" y="0">@</text>
+    <text class="mono prompt-host" x="50" y="0">archlinux</text>
+    <text class="mono prompt-sep" x="135" y="0">:</text>
+    <text class="mono prompt-dir" x="145" y="0">~</text>
+    <text class="mono prompt-arrow" x="160" y="0">❯</text>
+    <text class="mono prompt-cmd" x="180" y="0">fastfetch --profile minimalist</text>
   </g>
 
-  <!-- Top Navigation / Pill Bar Mockup -->
-  <g transform="translate(42, 28)">
-    <rect width="120" height="28" rx="14" fill="#121215" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1" />
-    <circle cx="16" cy="14" r="3.5" fill="#38bdf8" />
-    <text x="28" y="18" fill="#ffffff" font-size="11" font-weight="600" class="mono" letter-spacing="0.5">saru.dev</text>
+  <!-- Info Grid / Key-Values -->
+  <g transform="translate(28, 106)">
+    <!-- Line 1: Identity -->
+    <text class="mono key" x="0" y="0">user</text>
+    <text class="mono colon" x="90" y="0">::</text>
+    <text class="mono val" x="115" y="0">Saravanan (Saru)</text>
+    <text class="mono comment" x="270" y="0">// 18 y/o developer &amp; 3D creator</text>
 
-    <!-- Mini decorative window dots on the right -->
-    <circle cx="740" cy="14" r="4" fill="#ffffff" fill-opacity="0.2" />
-    <circle cx="754" cy="14" r="4" fill="#ffffff" fill-opacity="0.2" />
-    <circle cx="768" cy="14" r="4" fill="#ffffff" fill-opacity="0.4" />
-  </g>
+    <!-- Line 2: OS & WM -->
+    <text class="mono key" x="0" y="26">environment</text>
+    <text class="mono colon" x="90" y="26">::</text>
+    <text class="mono val-accent" x="115" y="26">Arch Linux x86_64</text>
+    <text class="mono val" x="275" y="26">[ Hyprland / Wayland + Kitty + Neovim ]</text>
 
-  <!-- Main Identity Area -->
-  <g transform="translate(48, 80)">
-    <!-- Handwritten Calligraphy Logo 'saru' with subtle glow -->
-    <g class="float-group">
-      <!-- Glow Underlay -->
-      <text x="0" y="62" fill="#ffffff" fill-opacity="0.2" font-size="64" font-weight="400" class="script-logo" filter="url(#softGlow)">saru</text>
-      <!-- Main Script Logo Text with Shimmer -->
-      <text x="0" y="62" fill="url(#textShimmer)" font-size="64" font-weight="400" class="script-logo">saru</text>
-    </g>
+    <!-- Line 3: Tech Stack -->
+    <text class="mono key" x="0" y="52">tech_stack</text>
+    <text class="mono colon" x="90" y="52">::</text>
+    <text class="mono val" x="115" y="52">Rust, C, Python, TypeScript, Godot 4, Blender 3D</text>
 
-    <!-- Subtitle / Role Tagline -->
-    <text x="145" y="44" fill="#ffffff" font-size="20" font-weight="700" class="mono" letter-spacing="-0.3">
-      Creative Developer <tspan fill="#38bdf8" font-weight="400">&amp;</tspan> Systems Explorer
-    </text>
+    <!-- Line 4: Focus -->
+    <text class="mono key" x="0" y="78">interests</text>
+    <text class="mono colon" x="90" y="78">::</text>
+    <text class="mono val-highlight" x="115" y="78">Low-Level Systems Programming • Game Engine Architecture • 3D Shaders</text>
 
-    <text x="145" y="66" fill="#cbd5e1" font-size="13" font-weight="400" class="mono" letter-spacing="0.2">
-      Linux &amp; Systems • Rust &amp; C • Blender 3D • Godot Engine 4
-    </text>
-
-    <!-- Location & Status Badge Row -->
-    <g transform="translate(0, 100)">
-      <!-- Pill Badge: Location -->
-      <g>
-        <rect width="215" height="30" rx="15" fill="#121215" fill-opacity="0.8" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
-        <!-- Pin Icon -->
-        <path d="M 18 10 C 14.5 10, 12 12.5, 12 15.5 C 12 19.5, 18 24, 18 24 C 18 24, 24 19.5, 24 15.5 C 24 12.5, 21.5 10, 18 10 Z" fill="none" stroke="#ffffff" stroke-width="1.3" />
-        <circle cx="18" cy="15" r="1.8" fill="#ffffff" />
-        <text x="32" y="19.5" fill="#ffffff" font-size="11" font-weight="500" class="mono">Pondicherry, India [IN]</text>
-      </g>
-
-      <!-- Pill Badge: Status Beacon -->
-      <g transform="translate(225, 0)">
-        <rect width="250" height="30" rx="15" fill="#121215" fill-opacity="0.8" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
-        <!-- Radar Pulse Dot -->
-        <circle class="pulse-beacon" cx="16" cy="15" r="4" fill="#22c55e" filter="url(#glow)" />
-        <circle cx="16" cy="15" r="3" fill="#22c55e" />
-        <text x="30" y="19.5" fill="#ffffff" font-size="11" font-weight="500" class="mono">Building low-level &amp; games</text>
-      </g>
-
-      <!-- Pill Badge: Age / Student -->
-      <g transform="translate(485, 0)">
-        <rect width="145" height="30" rx="15" fill="#121215" fill-opacity="0.8" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
-        <text x="16" y="19.5" fill="#a1a1aa" font-size="11" font-weight="500" class="mono">age: <tspan fill="#ffffff" font-weight="600">18 yrs old</tspan></text>
-      </g>
-    </g>
-  </g>
-
-  <!-- Right Decorative Aesthetic Element: Vector Monogram & Circuit Accents -->
-  <g transform="translate(710, 85)" opacity="0.3" stroke="#ffffff" stroke-width="1" fill="none">
-    <circle cx="45" cy="45" r="40" stroke-dasharray="3 3" />
-    <circle cx="45" cy="45" r="28" stroke-opacity="0.5" />
-    <path d="M 45 5 L 45 85 M 5 45 L 85 45" stroke-opacity="0.3" />
-    <rect x="37" y="37" width="16" height="16" rx="4" stroke="#ffffff" stroke-width="1.2" />
+    <!-- Line 5: Location & Mission -->
+    <text class="mono key" x="0" y="104">location</text>
+    <text class="mono colon" x="90" y="104">::</text>
+    <text class="mono val" x="115" y="104">Pondicherry, India 🇮🇳</text>
+    <text class="mono comment" x="310" y="104">"simplicity is prerequisite for reliability"</text>
   </g>
 </svg>
