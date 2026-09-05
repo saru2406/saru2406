@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="30" viewBox="0 0 108 30">
+  <defs>
+    <style>
+      @import url('https://cdn.jsdelivr.net/fontsource/fonts/maple-mono@latest/latin-400-normal.woff2');
+      .txt { font-family: 'Maple Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 12.5px; font-weight: 600; fill: #cdd6f4; }
+    </style>
+  </defs>
+  <rect x="0.5" y="0.5" width="107" height="29" rx="14.5" fill="#181825" stroke="#313244" stroke-width="1.2"/>
+  <g transform="translate(13, 7.5)" stroke="#a6e3a1" stroke-width="1.6" fill="none">
+    <circle cx="7.5" cy="7.5" r="7"/>
+    <line x1="0.5" y1="7.5" x2="14.5" y2="7.5"/>
+    <ellipse cx="7.5" cy="7.5" rx="3.5" ry="7"/>
+  </g>
+  <text class="txt" x="35" y="19.5">Website</text>
+</svg>
